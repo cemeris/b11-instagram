@@ -1,0 +1,61 @@
+/** @format */
+body {
+  margin: 0;
+  min-height: 1000px;
+}
+header {
+  background: #fff;
+  border-bottom: 1px solid #dbdbdb;
+  position: fixed;
+  width: 100vw;
+}
+
+.header_container {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 53px;
+  margin: auto;
+  max-width: 935px;
+  padding: 0 8px;
+}
+
+.top_menu a {
+  text-decoration: none;
+}
+
+.search_bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.search_bar > input {
+  width: 215px;
+  height: 29px;
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding: 0 7px 0 20px;
+}
+.search_bar > input::placeholder {
+  text-align: center;
+}
+.search_bar > svg {
+  position: absolute;
+  left: 72px;
+}
+
+.search_bar > input:focus {
+  outline: none;
+}
+
+.search_bar > input:not([value=""]) + svg,
+.search_bar > input:focus + svg {
+  left: 8px;
+}
+
+.search_bar > input:focus::placeholder {
+  text-align: left;
+}
