@@ -46,7 +46,6 @@ header {
 }
 .top_menu .dropdown_link {
   display: none;
-  height: 22px;
   width: 22px;
 }
 
@@ -167,6 +166,9 @@ main > div {
 
   .top_menu a {
     padding: 20px 7px;
+  }
+
+  .top_dropdown a {
     border-bottom: 1px solid #dbdbdb;
   }
 
