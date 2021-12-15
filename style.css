@@ -24,6 +24,7 @@ header {
 
 .top_logo {
   display: flex;
+  margin-right: 8px;
 }
 
 .header_container a {
@@ -65,6 +66,7 @@ header {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 .search_bar > input {
   width: 215px;
@@ -82,7 +84,7 @@ header {
   color: #8f8f8f;
   font-size: 9px;
   position: absolute;
-  left: 72px;
+  margin-right: 45px;
 }
 
 .search_bar > input:focus {
@@ -207,5 +209,11 @@ main > div {
 
   .top_menu.open .top_dropdown .text {
     display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .search_bar > input {
+    width: 100%;
   }
 }
