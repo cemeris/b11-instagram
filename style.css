@@ -132,9 +132,13 @@ main > div {
   vertical-align: middle;
 }
 
-.gallery_nav > a:hover {
-  border-top: 1px solid #262626;
+.gallery_nav > a:hover,
+.gallery_nav > .active {
   color: #262626;
+}
+
+.gallery_nav > .active {
+  border-top: 1px solid #262626;
   margin-top: -1px;
 }
 
@@ -146,7 +150,13 @@ main > div {
 
 .gallery_grid > div {
   height: 295px;
-  background: rgba(46, 139, 86, 0.219);
+}
+
+.gallery_grid > div > img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 295px;
 }
 
 @media only screen and (max-width: 850px) {
