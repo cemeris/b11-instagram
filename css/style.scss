@@ -1,4 +1,8 @@
 /** @format */
+@function pxToEm($from, $size: 16) {
+  @return $from / $size + 0em;
+}
+
 body {
   background: #fafafa;
   margin: 0;
@@ -16,15 +20,15 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 53px;
+  height: pxToEm(53);
   margin: auto;
-  max-width: 935px;
-  padding: 0 8px;
+  max-width: pxToEm(935);
+  padding: 0 pxToEm(8);
 }
 
 .top_logo {
   display: flex;
-  margin-right: 8px;
+  margin-right: pxToEm(8);
 }
 
 .header_container a {
@@ -35,18 +39,17 @@ header {
   display: flex;
   align-items: center;
 }
-.top_menu a,
-.top_menu label {
+.top_menu a {
   color: #262626;
   display: flex;
-  font-size: 22px;
+  font-size: pxToEm(22);
   align-items: center;
-  margin-left: 8px;
-  padding: 7px;
+  margin-left: pxToEm(8, 22);
+  padding: pxToEm(7, 22);
 }
 .top_menu .dropdown_link {
   display: none;
-  width: 22px;
+  width: pxToEm(22);
 }
 
 #dropdown_checkbox {
@@ -68,22 +71,22 @@ header {
   justify-content: space-around;
 }
 .search_bar > input {
-  width: 215px;
-  height: 29px;
+  width: pxToEm(215);
+  height: pxToEm(29);
   background: #fafafa;
-  border: 1px solid #dbdbdb;
+  border: pxToEm(1) solid #dbdbdb;
   box-sizing: border-box;
-  border-radius: 3px;
-  padding: 0 7px 0 20px;
+  border-radius: pxToEm(3);
+  padding: 0 pxToEm(7) 0 pxToEm(20);
 }
 .search_bar > input::placeholder {
   text-align: center;
 }
 .search_bar > .icon-search {
   color: #8f8f8f;
-  font-size: 9px;
+  font-size: pxToEm(9);
   position: absolute;
-  margin-right: 45px;
+  margin-right: pxToEm(45, 9);
 }
 
 .search_bar > input:focus {
@@ -92,7 +95,7 @@ header {
 
 .search_bar > input:not([value=""]) + .icon-search,
 .search_bar > input:focus + .icon-search {
-  left: 8px;
+  left: pxToEm(8);
 }
 
 .search_bar > input:focus::placeholder {
